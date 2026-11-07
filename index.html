@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Shoess: everyday sneakers, runners and trail shoes</title>
-<meta name="description" content="Everyday sneakers, runners and trail shoes, designed in Portland and made in Elche, Spain.">
+<meta name="description" content="Everyday sneakers, runners and trail shoes, designed in Cairo and made in Egypt.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
@@ -35,7 +35,7 @@ section{padding:96px 0}
 .btn-dark{background:var(--ink);color:var(--white)}.btn-dark:hover{background:var(--accent);color:#fff}
 .btn-light{background:var(--white);color:var(--ink);box-shadow:inset 0 0 0 1px rgba(255,255,255,.12)}.btn-light:hover{background:var(--ink);color:var(--white)}
 .btn-ghost{box-shadow:inset 0 0 0 1px rgba(255,255,255,.25)}.btn-ghost:hover{background:var(--ink);color:var(--white)}
-.price{display:inline-flex;align-items:center;font:500 14px var(--body);background:var(--white);border-radius:var(--pill);padding:6px 12px}
+.price{display:inline-flex;align-items:center;white-space:nowrap;font:500 14px var(--body);background:var(--white);border-radius:var(--pill);padding:6px 12px}
 .price s{color:var(--g6);margin-right:6px}
 .ico{width:18px;height:18px;flex:none}
 
@@ -254,7 +254,8 @@ footer{--ink:#050606;--white:#F4F4F1;--g6:#8A8E92;background:var(--ink);color:va
   .flinks{grid-template-columns:1fr 1fr}
   .btn{white-space:normal}
   .hsplit{align-items:start}
-  .card .price{top:auto;bottom:10px;right:10px}
+  .card .price{top:auto;bottom:10px;right:10px;white-space:nowrap}
+  .card .price s{display:none}
   .card .ph{aspect-ratio:1/1}
 }
 
@@ -325,14 +326,14 @@ html.loading,html.loading body{overflow:hidden}
 <main id="top">
 <!-- HERO -->
 <section class="hero" style="padding-bottom:24px">
-  <p class="hmeta">Designed in Portland.<br>Made in Elche, Spain.</p>
+  <p class="hmeta">Designed in Cairo.<br>Made in Egypt.</p>
   <div class="tabs" role="tablist" aria-label="Shoes" id="tabs"></div>
   <div class="counter"><button class="ib" id="hp" aria-label="Previous shoe">‹</button><span id="cnt">1 / 5</span><button class="ib" id="hn" aria-label="Next shoe">›</button></div>
   <div class="stage" id="stage">
     <svg class="ring" id="ring" viewBox="-500 -500 1000 1000" aria-hidden="true"></svg>
     <div class="giant" id="giant" aria-hidden="true"></div>
     <div class="bob"><img class="shoe" id="shoe" src="img/daily-chalk.webp" alt="The Daily sneaker in Chalk / Sky" width="900" height="650"></div>
-    <div class="ruler" aria-hidden="true"><i></i><em>US 9 · 26 cm</em></div>
+    <div class="ruler" aria-hidden="true"><i></i><em>EU 42 · 26 cm</em></div>
   </div>
   <div class="wrap hfoot" style="width:100%">
     <p id="hdesc"></p>
@@ -349,7 +350,7 @@ html.loading,html.loading body{overflow:hidden}
 <!-- NEW ARRIVALS -->
 <section id="new" style="padding-top:32px">
   <div class="wrap">
-    <div class="shead" data-r><h2 class="big"><i>New</i> arrivals</h2><p>The new colours for autumn, made in Elche and in stock now.</p></div>
+    <div class="shead" data-r><h2 class="big"><i>New</i> arrivals</h2><p>The new colours for autumn, made in Cairo and in stock now.</p></div>
     <div class="rail" id="rail" tabindex="0" aria-label="New arrivals"></div>
     <div class="arrows"><button class="ib" id="rp" aria-label="Previous">‹</button><button class="ib" id="rn" aria-label="Next">›</button></div>
   </div>
@@ -400,10 +401,10 @@ html.loading,html.loading body{overflow:hidden}
       <div class="feats" id="feats"></div>
       <div class="cshoe"><span class="tag">The Daily</span><img id="cimg" src="img/daily-chalk.webp" alt="The Daily in Chalk / Sky" loading="lazy"></div>
       <div class="spec">
-        <div class="nums"><div><b>240 g</b><small>a shoe, US 9</small></div><div><b>32 mm</b><small>heel stack</small></div><div><b>8 mm</b><small>drop</small></div></div>
+        <div class="nums"><div><b>240 g</b><small>a shoe, EU 42</small></div><div><b>32 mm</b><small>heel stack</small></div><div><b>8 mm</b><small>drop</small></div></div>
         <div class="sw2"><div class="l">Colour <b id="cc" style="color:var(--ink);font-weight:500;margin-left:6px">Chalk / Sky</b></div><div class="dots2" id="dots2"></div></div>
-        <p class="small">Free shipping over $75 and 60-day returns, worn or not.</p>
-        <button class="pill-buy" data-add="The Daily|118|daily-chalk">Shop the Daily <span>$118</span></button>
+        <p class="small">Free shipping over EGP 2,500 and 60-day returns, worn or not.</p>
+        <button class="pill-buy" data-add="The Daily|118|daily-chalk">Shop the Daily <span>EGP 4,150</span></button>
       </div>
     </div>
   </div>
@@ -423,13 +424,13 @@ html.loading,html.loading body{overflow:hidden}
 <!-- MADE IN -->
 <section id="factories">
   <div class="wrap">
-    <div class="hsplit"><h2 class="big" data-r>Made in<br><i>Elche, Spain</i></h2><p data-r>Elche has made shoes for a hundred years. Our two family-run factories sit eleven minutes apart and cut, stitch and last every pair we sell.</p></div>
+    <div class="hsplit"><h2 class="big" data-r>Made in<br><i>Cairo, Egypt</i></h2><p data-r>Cairo has made shoes for generations. Our two family-run factories sit eleven minutes apart and cut, stitch and last every pair we sell.</p></div>
     <div class="made">
       <div class="pic" data-r><span class="cap">The stitching room</span><img src="img/factory.webp" alt="Workers in a bright shoe factory with racks of uppers" loading="lazy"></div>
       <div class="facts" data-r>
         <div class="fact"><b>2 <small>family factories</small></b><p>One cuts and stitches uppers, the other moulds soles and lasts every pair.</p></div>
         <div class="fact"><b>11 min <small>between them</small></b><p>Uppers cross town by van twice a day, so nothing sits waiting.</p></div>
-        <div class="fact"><b>$45 <small>to resole a Court 78</small></b><p>Send them back and the same room stitches on a new sole.</p></div>
+        <div class="fact"><b>EGP 1,600 <small>to resole a Court 78</small></b><p>Send them back and the same room stitches on a new sole.</p></div>
         <a class="btn btn-dark" href="#factories" style="align-self:flex-start">Meet the factories</a>
       </div>
     </div>
@@ -439,14 +440,14 @@ html.loading,html.loading body{overflow:hidden}
 
 <footer class="dark" id="contact">
   <div class="perks wrap" style="padding:0;max-width:1360px">
-    <div class="perk"><div><b>Free shipping over $75</b><span>Standard, 2 to 5 working days</span></div></div>
+    <div class="perk"><div><b>Free shipping over EGP 2,500</b><span>Standard, 2 to 5 working days</span></div></div>
     <div class="perk"><div><b>60-day returns</b><span>Worn or not, on us</span></div></div>
     <div class="perk"><div><b>Free size swaps</b><span>Free both ways, sent the same day</span></div></div>
-    <div class="perk"><div><b>Resole your Court 78</b><span>$45, back in about two weeks</span></div></div>
+    <div class="perk"><div><b>Resole your Court 78</b><span>EGP 1,600, back in about two weeks</span></div></div>
   </div>
   <div class="wrap">
     <div class="fmain">
-      <div><a class="logo" href="#top">shoess<b>.</b></a><p>(503) 555-0148<br>hello@shoess.example<br>Mon to Fri, 8 to 6 PT</p></div>
+      <div><a class="logo" href="#top">shoess<b>.</b></a><p>+20 2 5555 0148<br>hello@shoess.example<br>Sat to Thu, 10 to 8 Cairo time</p></div>
       <div class="flinks">
         <div><h4>SHOP</h4><a href="#best">All shoes</a><a href="#running">Everyday</a><a href="#running">Running</a><a href="#trail">Trail</a><a href="#kids">Kids</a></div>
         <div><h4>HELP</h4><a href="#comfort">Find your size</a><a href="#contact">Shipping</a><a href="#contact">Returns</a><a href="#contact">Care</a></div>
@@ -455,7 +456,7 @@ html.loading,html.loading body{overflow:hidden}
       <div class="news"><h4>BE THE FIRST TO KNOW</h4><p>One email when a new colour lands, a day before everyone else. No more than twice a month.</p>
         <form class="nl" id="nl" novalidate><label for="em" style="position:absolute;left:-9999px">Email address</label><input id="em" type="email" placeholder="Email address" required autocomplete="email"><button class="btn" type="submit">Sign up</button></form><p class="fmsg" id="fm" role="status"></p></div>
     </div>
-    <div class="fbot"><span>© 2026 Shoess Footwear Co. Designed in Portland. Made in Elche, Spain.</span><span>Privacy · Terms</span><span>United States (USD $)</span><div class="pays"><span>Visa</span><span>Mastercard</span><span>Amex</span><span>Apple Pay</span><span>Shop Pay</span></div></div>
+    <div class="fbot"><span>© 2026 Shoess Footwear Co. Designed in Cairo. Made in Egypt.</span><span>Privacy · Terms</span><span>Egypt (EGP)</span><div class="pays"><span>Visa</span><span>Mastercard</span><span>Meeza</span><span>Fawry</span><span>Vodafone Cash</span></div></div>
   </div>
 </footer>
 
@@ -465,7 +466,7 @@ html.loading,html.loading body{overflow:hidden}
 <script>
 const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)],IMG=k=>`img/${k}.webp`;
 const LOADING=document.documentElement.classList.contains('loading'),D=LOADING?3.2:0;
-const money=n=>'$'+Number(n).toLocaleString('en-US',{minimumFractionDigits:0});
+const egp=u=>Math.round(u*35/50)*50,money=n=>'EGP '+egp(n).toLocaleString('en-US');
 
 // tick ring
 function ring(svg,r,n,len,color,major){let h='';for(let i=0;i<n;i++){const a=i/n*Math.PI*2,L=i%major===0?len*1.8:len;h+=`<line x1="${Math.cos(a)*r}" y1="${Math.sin(a)*r}" x2="${Math.cos(a)*(r-L)}" y2="${Math.sin(a)*(r-L)}" stroke="${color}" stroke-width="${i%major===0?2:1.2}"/>`}svg.innerHTML=h}
@@ -473,10 +474,10 @@ ring($('#ring'),470,120,12,'#A3A7AA',5);ring($('#ring2'),470,110,14,'#FFFFFF',5)
 
 // hero shoes
 const SH={
- Daily:{price:118,desc:'<b>The Daily.</b> A knit sneaker on a wave-cut foam sole with a clear heel cushion, made in Elche.',cols:[['Chalk / Sky','daily-chalk','#BCD0EE'],['Chalk / Red','daily-red','#F0482B'],['Sage','daily-sage','#8FA38A'],['Navy / Lilac','daily-navy','#2A2E5B']]},
+ Daily:{price:118,desc:'<b>The Daily.</b> A knit sneaker on a wave-cut foam sole with a clear heel cushion, made in Cairo.',cols:[['Chalk / Sky','daily-chalk','#BCD0EE'],['Chalk / Red','daily-red','#F0482B'],['Sage','daily-sage','#8FA38A'],['Navy / Lilac','daily-navy','#2A2E5B']]},
  Tempo:{price:148,desc:'<b>Tempo.</b> Our high-stack trainer with a channelled rocker, 40 mm of foam and 255 g.',cols:[['Lime','tempo-lime','#D6F23A'],['Grey / Blue','tempo-grey','#C9CED3']]},
  Ridge:{price:168,desc:'<b>Ridge.</b> A dry-trail shoe with deep lugs and a grippy sole, for loose ground.',cols:[['Olive','ridge','#6F7550']]},
- 'Court 78':{price:128,desc:'<b>Court 78.</b> A clean court shoe, resoled in Elche for $45 when the time comes.',cols:[['Cream / Green','court-cream','#E8DDC4'],['Black','court-black','#151617']]},
+ 'Court 78':{price:128,desc:'<b>Court 78.</b> A clean court shoe, resoled in Cairo for EGP 1,600 when the time comes.',cols:[['Cream / Green','court-cream','#E8DDC4'],['Black','court-black','#151617']]},
  Float:{price:68,desc:'<b>Float.</b> A light foam clog for recovery days and warm weather.',cols:[['Sky','float','#7FB1EE']]}
 };
 const KEYS=Object.keys(SH);let cur=0,col=0,busy=false;
@@ -512,7 +513,7 @@ $('#stm').innerHTML=ST.map(t=>t.startsWith('<img')?t:t.split(' ').map(w=>`<span 
 const NEW=[['Tempo',148,'tempo','Best seller'],['Tempo Lite',138,'tempo-lite','New'],['Tempo Max',168,'tempo-max','Best seller'],['Stride',128,'stride',''],['Stride Wide',128,'stride-wide',''],['Tempo Track',148,'tempo-track',''],['Cadence',158,'cadence','Sale',188]];
 const BEST=[['Commute',124,'commute','Best seller'],['Court 78',128,'court-cream','Best seller'],['Studio',104,'studio','Best seller'],['Tempo',148,'tempo','Best seller'],['Tempo Max',168,'tempo-max','Best seller'],['The Daily',118,'daily-chalk','Best seller'],['Weekender',98,'weekender','Best seller'],['Weekender Hi',108,'weekender-hi','Sale',128]];
 const cat=n=>/Tempo|Stride|Cadence/.test(n)?'Running':/Ridge/.test(n)?'Trail':'Everyday';
-const card=p=>`<article class="card" data-r><div class="ph">${p[3]?`<span class="badge ${p[3]==='New'?'new':p[3]==='Sale'?'sale':''}">${p[3]}</span>`:''}<span class="price">${p[4]?`<s>${money(p[4])}</s>`:''}${money(p[1]).replace('$','$')+(p[4]?'':'.00')}</span><img src="${IMG(p[2])}" alt="${p[0]}" loading="lazy"></div><div class="meta"><div><b>${p[0]}</b><small>${cat(p[0])}</small></div><button class="btn btn-dark" data-add="${p[0]}|${p[1]}|${p[2]}"><svg class="ico" style="width:14px;height:14px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 8h14l-1 12H6L5 8z" stroke-linejoin="round"/><path d="M9 8V6.5a3 3 0 016 0V8"/></svg>Shop</button></div></article>`;
+const card=p=>`<article class="card" data-r><div class="ph">${p[3]?`<span class="badge ${p[3]==='New'?'new':p[3]==='Sale'?'sale':''}">${p[3]}</span>`:''}<span class="price">${p[4]?`<s>${money(p[4])}</s>`:''}${money(p[1])}</span><img src="${IMG(p[2])}" alt="${p[0]}" loading="lazy"></div><div class="meta"><div><b>${p[0]}</b><small>${cat(p[0])}</small></div><button class="btn btn-dark" data-add="${p[0]}|${p[1]}|${p[2]}"><svg class="ico" style="width:14px;height:14px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 8h14l-1 12H6L5 8z" stroke-linejoin="round"/><path d="M9 8V6.5a3 3 0 016 0V8"/></svg>Shop</button></div></article>`;
 $('#rail').innerHTML=NEW.map(card).join('');$('#best-grid').innerHTML=BEST.map(card).join('');
 const rail=$('#rail'),step=()=>rail.querySelector('.card').getBoundingClientRect().width+16;
 $('#rn').onclick=()=>rail.scrollBy({left:step(),behavior:'smooth'});$('#rp').onclick=()=>rail.scrollBy({left:-step(),behavior:'smooth'});
@@ -528,7 +529,7 @@ $('#dots2').innerHTML=SH.Daily.cols.map((c,i)=>`<button class="dot" data-c="${i}
 $('#dots2').onclick=e=>{const b=e.target.closest('.dot');if(!b)return;const c=SH.Daily.cols[b.dataset.c];$$('#dots2 .dot').forEach(d=>d.setAttribute('aria-pressed',d===b));$('#cimg').src=IMG(c[1]);$('#cc').textContent=c[0]};
 
 // marquee
-const MQ=['Free shipping over $75','Made in Elche, Spain','60-day returns, worn or not','Sizes 6 to 13 and wide fits','Court 78 resoled for $45','Designed in Portland'];
+const MQ=['Free shipping over EGP 2,500','Made in Egypt','60-day returns, worn or not','Sizes 36 to 47 and wide fits','Court 78 resoled for EGP 1,600','Designed in Cairo'];
 const thumbs=['tempo-lime','daily-chalk','ridge','court-cream','float','tempo-grey'];
 $('#mqt').innerHTML=[0,1].map(()=>MQ.map((t,i)=>`<span>${t}</span><img src="${IMG(thumbs[i])}" alt="" loading="lazy">`).join('')).join('');
 
@@ -538,7 +539,7 @@ const drawer=$('#drawer');
 function bagUI(){
   $('#bagN').textContent=bag.length;$('#bagN').classList.toggle('on',bag.length>0);
   $('#lines').innerHTML=bag.length?bag.map((b,i)=>`<li><img src="${IMG(b.img)}" alt=""><div><b>${b.n}</b><small>${money(b.p)}</small></div><button data-rm="${i}">Remove</button></li>`).join(''):'<li class="empty" style="display:block;background:none">Your bag is empty.</li>';
-  $('#tot').textContent=money(bag.reduce((s,b)=>s+b.p,0));$('#co').disabled=!bag.length;
+  $('#tot').textContent='EGP '+bag.reduce((s,b)=>s+egp(b.p),0).toLocaleString('en-US');$('#co').disabled=!bag.length;
 }
 function openBag(o){drawer.classList.toggle('open',o);drawer.inert=!o;drawer.setAttribute('aria-hidden',!o);$('#scrim').classList.toggle('on',o);if(o)$('#dclose').focus()}
 let tt;function toast(m){const t=$('#toast');t.textContent=m;t.classList.add('show');clearTimeout(tt);tt=setTimeout(()=>t.classList.remove('show'),1800)}
