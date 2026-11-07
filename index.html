@@ -69,7 +69,7 @@ header.hide{transform:translateY(-102%)}
 .counter{position:absolute;right:24px;top:80px;display:flex;align-items:center;gap:6px;font:500 12px var(--body);z-index:3}
 .counter .ib{width:30px;height:30px}
 .stage{position:relative;flex:1;display:grid;place-items:center;min-height:380px}
-.giant{position:absolute;left:0;right:0;top:50%;transform:translateY(-62%);text-align:center;font:600 clamp(110px,19vw,270px)/.8 var(--display);letter-spacing:-.06em;text-transform:uppercase;color:var(--ink);white-space:nowrap;z-index:0;user-select:none}
+.giant{position:absolute;left:0;right:0;top:50%;transform:translateY(-62%);text-align:center;font:600 clamp(96px,17.5vw,250px)/.8 var(--display);letter-spacing:-.06em;text-transform:uppercase;color:var(--ink);white-space:nowrap;z-index:0;user-select:none}
 .giant span{display:inline-block}
 .ring{position:absolute;left:50%;top:50%;width:min(1100px,110vw);aspect-ratio:1;transform:translate(-50%,-50%);z-index:0;opacity:.5;pointer-events:none}
 .shoe{position:relative;z-index:2;width:min(60vw,760px);filter:drop-shadow(0 40px 30px rgba(0,0,0,.55));will-change:transform}
@@ -94,7 +94,7 @@ header.hide{transform:translateY(-102%)}
   .hero{padding-top:70px}
   .hmeta{display:none}
   .counter{top:auto;bottom:auto;position:static;justify-content:center;margin-top:10px}
-  .giant{font-size:34vw;transform:translateY(-70%)}
+  .giant{font-size:29vw;transform:translateY(-70%)}
   .shoe{width:92vw}
   .hfoot{grid-template-columns:1fr;gap:14px;justify-items:center;text-align:center}
   .hbuy{justify-content:center;flex-wrap:wrap}
@@ -495,7 +495,7 @@ function renderHero(anim,dir=1){
   if(anim&&window.gsap){
     gsap.to(img,{x:-80*dir,opacity:0,duration:.25,ease:'power2.in',onComplete:()=>{swap();gsap.fromTo(img,{x:80*dir,opacity:0},{x:0,opacity:1,duration:.7,ease:'expo.out'})}});
   }else swap();
-  if(gi.dataset.k!==k){gi.dataset.k=k;gi.innerHTML=[...k].map(ch=>`<span>${ch===' '?'&nbsp;':ch}</span>`).join('');if(anim&&window.gsap)gsap.from('#giant span',{yPercent:60,opacity:0,duration:.8,stagger:.05,ease:'expo.out'})}
+  if(!gi.dataset.k){gi.dataset.k='brand';gi.innerHTML=[...'SHOESS'].map(ch=>`<span>${ch}</span>`).join('')}
 }
 $('#tabs').onclick=e=>{const b=e.target.closest('.tab');if(!b)return;const n=+b.dataset.i;if(n===cur)return;const dir=n>cur?1:-1;cur=n;col=0;renderHero(true,dir)};
 $('#hp').onclick=()=>{cur=(cur+KEYS.length-1)%KEYS.length;col=0;renderHero(true,-1)};
